@@ -1,0 +1,540 @@
+*{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Barlow Condensed", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333;
+    color: white;
+    padding-top: 80px;
+}
+body h2{
+    color: white;
+}
+header{
+  position: fixed;
+  top: 0; 
+  width: 100%; 
+    border:0;
+    margin:0;
+    padding:0;
+    background-color: black;
+    height:80px;
+    z-index:1000;
+    
+}
+.myname{
+    color:white;
+    font-family: "Playfair Display", serif;
+    padding-left: 30px;
+}
+.header-container{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:80px;
+}
+.section-title{
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    font-style: normal; 
+}
+.nav-container a{
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+}
+nav a:hover {
+    text-decoration: underline;
+    transition: 0.3s;
+    color:#ffd700;
+}
+.section-title {
+    margin-bottom: 20px;
+    font-size: 70px;
+    color: #333;
+}
+.single-line{
+    display: inline-block;
+    font-family: "Playwrite ES", cursive;
+    border-right: 5px solid #ffd700;
+    width:100%;
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+     typing 2s steps(30, end), cursor .75s step-end infinite alternate;
+}
+.home-container{
+    height:100vh;
+}
+.home-container,.about-container,.resume-container,.contact-container{
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.image .bg-image{
+    position: absolute;
+    top:40px;
+    right:-10px;
+    width:600px;
+    height: 700px;
+    opacity: 50%;
+
+}
+.image .my-image{
+    position: absolute;
+    top:80px;
+    right:100px;
+    width: 400px;
+    height: 75vh;
+}
+
+@keyframes cursor{
+    50% { border-color: transparent; }
+}
+@keyframes typing{
+    from { width:0 }
+    to { width: 100%; }
+}
+.about-container{
+    justify-content: space-between;
+    align-items: center;
+}
+.about-me {
+    position: relative;
+    padding: 20px; 
+    padding-bottom: 100px;
+}
+.about-me .section-title{
+    position: relative;
+    z-index: 100;
+}
+.about-me img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 30%; 
+    z-index: 0;
+}
+.line{
+    position: relative;
+    border-bottom: 5px solid #ffd700;
+    width:120px;
+    z-index: 100;
+}
+.text{
+    padding: 10px;
+    font-family: "Oswald",sans-serif;
+    font-size:30px;
+}
+.resume-button{
+    font-family: "Oswald",sans-serif;
+    outline: none;
+    margin-bottom: 30px;
+    font-size:25px;
+    padding: 10px;
+    color:#ffd700;
+    background-color: #333;
+    border: 2px solid #ffd700;
+    transition: 0.5s;
+    border-radius:5px;
+}
+.resume-button:hover{
+  color:white;
+  background-color: #ffd700;
+
+}
+.skills-container{
+  height:100vh;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-rows: 200px 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 50px;
+  
+}
+.skills-title{
+  grid-row: 1 / 2;
+  grid-column: 1 / 4;
+  justify-self: center;
+  align-self: center;
+}
+.skills-container .skill-box{
+  border: 2px solid #ffd700;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#ffd700;
+  transition: 0.3s;
+  
+}
+.skill-box:hover{
+  color:white;
+  background-color: #ffd700;
+}
+
+.skill-bar{
+  border:2px solid white;
+  width:70%;
+  height:18px;
+  border-radius: 20px;
+  color:black;
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.skill-name{
+  padding-top:35px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 30px;
+}
+.skill-box .C{
+  background: linear-gradient(to right, #ffd700 80%, #333 20%);
+}
+.skill-box .HTML{
+  background: linear-gradient(to right, #ffd700 90%, #333 10%);
+}
+.skill-box .CSS{
+  background: linear-gradient(to right, #ffd700 90%, #333 10%);
+}
+.skill-box .JS{
+  background: linear-gradient(to right, #ffd700 80%, #333 20%);
+}
+.skill-box .PHP{
+  background: linear-gradient(to right, #ffd700 85%, #333 15%);
+}
+.skill-box .SQL{
+  background: linear-gradient(to right, #ffd700 80%, #333 20%);
+}
+.skill-box:hover  .C{
+  background: linear-gradient(to right, white 80%, #ffd700 20%);
+}
+.skill-box:hover .HTML{
+  background: linear-gradient(to right, white 90%, #ffd700 10%);
+  
+}
+.skill-box:hover .CSS{
+  background: linear-gradient(to right, white 90%, #ffd700 10%);
+}
+.skill-box:hover .JS{
+  background: linear-gradient(to right, white 80%, #ffd700 20%);
+}
+.skill-box:hover .PHP{
+  background: linear-gradient(to right, white 85%, #ffd700 15%);
+}
+.skill-box:hover .SQL{
+  background: linear-gradient(to right, white 80%, #ffd700 20%);
+}
+.skills-title .line{
+    position: relative;
+    justify-self: center;
+    border-bottom: 5px solid #ffd700;
+    padding-left:80px;
+    width:50px;
+    z-index: 100;
+    margin-bottom: 20px;
+}
+.projects-container{
+  display: grid;
+  align-content: center;
+  height:100vh;
+  grid-gap:30px;
+  grid-template-rows: 200px 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 50px;
+}
+.project-title{
+  grid-row: 1 / 2;
+  grid-column: 1 / 3;
+  justify-self: center;
+  align-self: center;
+}
+.project-title .line{
+  margin-bottom: 50px;
+  width:215px;
+}
+.projects-container .project-box{
+
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:#ffd700;
+  transition: 0.3s;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+.projects-container .project-box .proj-icon{
+  flex-shrink: 0; 
+  margin-right: 20px;
+}
+.projects-container .project-box .proj-details {
+  display: flex;
+  flex-direction: column;
+}
+.projects-container .project-box .proj-icon img{
+  height:90px;
+  width:auto;
+  
+}
+.projects-container .project-box .proj-title{
+  font-size: 1.5em;
+  font-weight:bold;
+  font-family: "Oswald",sans-serif;
+  color:white;
+  text-align: center;
+  padding-bottom: 10px;
+}
+.projects-container .project-box .proj-description{
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Oswald",sans-serif;
+  color:white;
+  text-align: center;
+
+}
+
+.projects-container .project-box:hover{
+  transform: scale(1.05);
+}
+.projects-container a{
+  text-decoration: none;
+}
+
+.resume-container .about-me{
+  width:250px;
+}
+.resume-container .about-me img{
+  position: absolute;
+    top: 0;
+    left:-30px ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 30%; 
+    z-index: 0;
+}
+.resume-container .text{
+  margin-left: 30px;
+  padding-left:40px;
+  padding-top: 30px;
+
+}
+.resume-container .text a{
+  text-decoration: none;
+}
+.contact-container .text a{
+  text-decoration: none;
+}
+.contact-container .about-me img{
+  position: absolute;
+    top: -30px;
+    left:0px ;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    opacity: 30%; 
+    z-index: 0;
+}
+.contact-container .text{
+  margin-left: 30px;
+  padding-left:40px;
+  padding-top: 30px;
+  align-content: center;
+  justify-content: center;
+
+}
+.contact-container .text a{
+  color:#ffd700;
+}
+
+.footer{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  background-color: black;
+  color:#ffd700;
+  height:80px;
+}
+.footer-tag{
+  width:100%;
+  text-align: center;
+}
+.footer-tag a{
+  text-decoration: underline;
+  color: #ffd700;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 100 to 400
+
+.playwrite-nz-<uniquifier> {
+  font-family: "Playwrite NZ", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+/*// <uniquifier>: Use a unique and descriptive class name
+// <weight>: Use a value from 400 to 900
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}*/
+/*.barlow-condensed-thin {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.barlow-condensed-extralight {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.barlow-condensed-light {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.barlow-condensed-regular {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.barlow-condensed-medium {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.barlow-condensed-semibold {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.barlow-condensed-bold {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.barlow-condensed-extrabold {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.barlow-condensed-black {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.barlow-condensed-thin-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.barlow-condensed-extralight-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.barlow-condensed-light-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.barlow-condensed-regular-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.barlow-condensed-medium-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.barlow-condensed-semibold-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.barlow-condensed-bold-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.barlow-condensed-extrabold-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.barlow-condensed-black-italic {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+*/
